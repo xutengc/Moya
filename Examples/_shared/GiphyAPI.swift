@@ -21,7 +21,7 @@ extension Giphy: TargetType {
             return .post
         }
     }
-    public var task: Task {
+    public var task: MoyaTask {
         switch self {
         case let .upload(data):
             let multipartFormBodyParts = [MultipartFormBodyPart(provider: .data(data), name: "file", fileName: "gif.gif", mimeType: "image/gif")]
